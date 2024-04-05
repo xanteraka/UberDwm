@@ -1,4 +1,4 @@
-#include "themes/gruvbox.h"
+#include "themes/catppuccin.h"
 static char *font = "Iosevka Nerd Font:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 static char *shell = "/bin/zsh";

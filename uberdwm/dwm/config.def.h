@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include "fibonacci.c"
-#include "themes/gruvbox.h"
+#include "themes/catppuccin.h"
 
 /* appearance */
 static const unsigned int borderpx  = 5;        /* border pixel of windows */
@@ -18,8 +18,8 @@ static const char *colors[][3]      = {
 	[SchemeStatus]  =   { foreground,            background,          "#000000"          }, // Statusbar right {text,background,not used but cannot be empty}
  	[SchemeTagsSel]  =  { focused_foreground,    focused_background,  "#000000"          }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm]  = { foreground,            background,          "#000000"          }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]  =  { focused_background,    focused_background,  "#000000"          }, // infobar middle  selected {text,background,not used but cannot be empty}
-	[SchemeInfoNorm]  = { focused_background,    focused_background,  "#000000"          }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeInfoSel]  =  { focused_foreground,    focused_background,  "#000000"          }, // infobar middle  selected {text,background,not used but cannot be empty}
+	[SchemeInfoNorm]  = { focused_foreground,    focused_background,  "#000000"          }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 
@@ -34,7 +34,7 @@ static const Rule rules[] = {
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Firefox", NULL,     NULL,           0,         0,          0,          -1,        -1 },
-	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "st",      NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -49,7 +49,7 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
  	{ "[@]",      spiral },
- 	{ "[\\]",      dwindle },
+ 	{ "[\\]",     dwindle },
 };
 
 /* key definitions */
